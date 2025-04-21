@@ -11,9 +11,41 @@ h1 {
   margin: 1rem 0;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
 canvas {
-  display: block;
-  margin: auto;
   background-color: black;
   border: 1px solid #333;
+}
+
+.legend {
+  text-align: left;
+}
+
+.legend h2 {
+  margin-bottom: 0.5rem;
+}
+
+.legend ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.legend li {
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.color-box {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid #fff;
 }
