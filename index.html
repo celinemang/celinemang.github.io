@@ -1,15 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Celine Mang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 720px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #666;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-top: 1.5rem;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      padding: 12px 24px;
+      background-color: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+
+    .button:hover {
+      background-color: #005fa3;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hi, This is Celine</h1>
-  <p>
-    Check out my <a href="solar-system-simulator/index.html">Solar System Simulator</a> 🚀
-  </p>
+  <div class="container">
+    <h1>Celine Mang</h1>
+    <h2>VR Researcher · HCI Enthusiast · Game Developer</h2>
+
+    <p>
+      Hi! I'm Celine, a computer science graduate passionate about Human-Computer Interaction and Virtual Reality.
+      I enjoy building immersive, human-centered experiences with Unity and researching how technology can better support real users.
+    </p>
+
+    <div class="buttons">
+      <a class="button" href="resume.pdf" target="_blank">📄 Resume</a>
+      <a class="button" href="https://github.com/celinemang" target="_blank">💻 GitHub</a>
+      <a class="button" href="mailto:celine.mang@vanderbilt.edu">📧 Email</a>
+    </div>
+  </div>
 </body>
 </html>
