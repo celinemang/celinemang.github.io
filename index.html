@@ -3,91 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Celine Mang</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f9fafb;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 40px 20px;
-    }
-
-    .container {
-      max-width: 720px;
-      width: 100%;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.3rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: #666;
-      margin-top: 0;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-top: 1.5rem;
-    }
-
-    .buttons {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      padding: 12px 24px;
-      background-color: #0077cc;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: background-color 0.2s ease;
-    }
-
-    .button:hover {
-      background-color: #005fa3;
-    }
-  </style>
+  <title>Celine Mang - VR Researcher & HCI Enthusiast</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Celine Mang</h1>
-    <h2>VR Researcher · HCI Enthusiast · Game Developer</h2>
-
-    <p>
-      Hi! I'm Celine, a computer science graduate passionate about Human-Computer Interaction and Virtual Reality.
-      I enjoy building immersive, human-centered experiences with Unity and researching how technology can better support real users.
-    </p>
-
-    <div class="buttons">
-      <a class="button" href="resume.pdf" target="_blank">📄 Resume</a>
-      <a class="button" href="https://github.com/celinemang" target="_blank">💻 GitHub</a>
-      <a class="button" href="mailto:celine.mang@vanderbilt.edu">📧 Email</a>
-      <a class="button" href="solar-system-simulator/index.html">🚀 Solar System Simulator</a>
-      <a class="button" href="orbit-simulator/index.html">🪐 Orbit Simulator</a>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">Celine Mang</div>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Hello, I'm <span class="highlight">Celine Mang</span></h1>
+          <p class="hero-subtitle">VR Researcher · HCI Enthusiast · Game Developer</p>
+          <p class="hero-description">
+            I'm a computer science graduate passionate about Human-Computer Interaction and Virtual Reality. 
+            I enjoy building immersive, human-centered experiences with Unity and researching how technology 
+            can better support real users.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            <a href="#projects" class="btn btn-secondary">View Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section">
+      <div class="container">
+        <h2 class="section-title">Research</h2>
+        <div class="research-grid">
+          <div class="research-item">
+            <h3>Virtual Reality & Immersion</h3>
+            <p>Exploring how VR can create more engaging and intuitive user experiences, particularly in gaming and educational contexts.</p>
+          </div>
+          <div class="research-item">
+            <h3>Human-Computer Interaction</h3>
+            <p>Investigating novel interaction paradigms that bridge the gap between human cognition and digital interfaces.</p>
+          </div>
+          <div class="research-item">
+            <h3>Unity Development</h3>
+            <p>Building and prototyping immersive experiences to test research hypotheses and validate design principles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Solar System Simulator</h3>
+              <span class="project-tag">VR/AR</span>
+            </div>
+            <p>An immersive solar system simulation built with Unity, exploring celestial mechanics and spatial learning.</p>
+            <div class="project-links">
+              <a href="solar-system-simulator/index.html" class="project-link">View Project →</a>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Orbit Simulator</h3>
+              <span class="project-tag">Physics</span>
+            </div>
+            <p>Interactive orbital mechanics simulation demonstrating gravitational forces and orbital dynamics.</p>
+            <div class="project-links">
+              <a href="orbit-simulator/index.html" class="project-link">View Project →</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Portfolio Website</h3>
+              <span class="project-tag">Web Dev</span>
+            </div>
+            <p>This responsive portfolio website showcasing my work and research interests.</p>
+            <div class="project-links">
+              <a href="https://github.com/celinemang/celinemang.github.io" class="project-link">View Code →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+      <div class="container">
+        <h2 class="section-title">Publications & Presentations</h2>
+        <div class="publications-list">
+          <div class="publication-item">
+            <div class="publication-year">2024</div>
+            <div class="publication-content">
+              <h3>Virtual Reality in Educational Gaming: A Human-Centered Approach</h3>
+              <p class="publication-authors">Celine Mang</p>
+              <p class="publication-venue">Computer Science Capstone Project, Vanderbilt University</p>
+            </div>
+          </div>
+          
+          <div class="publication-item">
+            <div class="publication-year">2024</div>
+            <div class="publication-content">
+              <h3>Exploring Spatial Learning Through Immersive Simulations</h3>
+              <p class="publication-authors">Celine Mang</p>
+              <p class="publication-venue">HCI Research Symposium</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-content">
+          <p class="contact-description">
+            I'm always interested in discussing VR research, HCI projects, or potential collaborations. 
+            Feel free to reach out!
+          </p>
+          <div class="contact-links">
+            <a href="mailto:celine.mang@vanderbilt.edu" class="contact-link">
+              <span class="contact-icon">📧</span>
+              <span>celine.mang@vanderbilt.edu</span>
+            </a>
+            <a href="https://github.com/celinemang" class="contact-link" target="_blank">
+              <span class="contact-icon">💻</span>
+              <span>GitHub</span>
+            </a>
+            <a href="resume.pdf" class="contact-link" target="_blank">
+              <span class="contact-icon">📄</span>
+              <span>Resume</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Celine Mang. Built with ❤️ and lots of ☕</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
