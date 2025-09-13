@@ -1,13 +1,19 @@
+# _config.yml
+
+# Site Settings
 title: "Celine Mang"
-description: "VR · HCI · Emotion Research"
+description: "VR / HCI / Emotion Research"
 url: "https://celinemang.github.io"
 baseurl: ""
 
+# Theme
 remote_theme: "mmistakes/minimal-mistakes"
 
+# Plugins
 plugins:
   - jekyll-remote-theme
 
+# Author
 author:
   name: "Celine Mang"
   avatar: "/assets/images/profile.jpg"
@@ -23,8 +29,44 @@ author:
       icon: "fas fa-link"
       url: "https://celine-blog.vercel.app"
 
+# Collections
 collections:
   publications:
     output: true
+    permalink: /publications/:path/
   portfolio:
     output: true
+    permalink: /portfolio/:path/
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "single"
+      author_profile: true
+  -
+    scope:
+      path: ""
+      type: "portfolio"
+    values:
+      layout: "single"
+      author_profile: true
+
+# Navigation
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Projects"
+    url: "/portfolio/"
+  - title: "Publications"
+    url: "/publications/"
+
+# Markdown Processor
+markdown: kramdown
+
+# Enable pagination (optional)
+paginate: 5
+paginate_path: "/page:num/"
