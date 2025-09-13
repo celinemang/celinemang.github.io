@@ -1,3 +1,30 @@
-theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
+title: "Celine Mang"
+description: "VR · HCI · Emotion Research"
+url: "https://celinemang.github.io"
+baseurl: ""
+
+remote_theme: "mmistakes/minimal-mistakes"
+
+plugins:
+  - jekyll-remote-theme
+
+author:
+  name: "Celine Mang"
+  avatar: "/assets/images/profile.jpg"
+  bio: "VR / HCI / Emotion Research"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/celinemang"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://linkedin.com/in/celinemang"
+    - label: "Blog"
+      icon: "fas fa-link"
+      url: "https://celine-blog.vercel.app"
+
+collections:
+  publications:
+    output: true
+  portfolio:
+    output: true
