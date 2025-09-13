@@ -1,25 +1,10 @@
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}" class="no-js">
-  {% include head.html %}
-
-  <body class="{{ page.layout | default: 'default' }}{% if page.classes %} {{ page.classes }}{% endif %}">
-
-    {% include skip-links.html %}
-    
-
-    <div class="page__wrapper">
-      {% include masthead.html %}
-
-      {% include navigation.html %}
-
-      <div class="initial-content">
-        {{ content }}
-      </div>
-
-      {% include footer.html %}
-    </div>
-
-    {% include search/search_form.html %}
-    {% include scripts.html %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    {{ content }}
   </body>
 </html>
