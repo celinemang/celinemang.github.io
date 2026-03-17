@@ -1,0 +1,203 @@
+/* --- Cute & Clean "More" Buttons --- */
+.more-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.6rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-main);
+    background-color: #fff;
+    border: 1px solid var(--line-color);
+    border-radius: 50px; /* Cute pill shape */
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02); /* Soft shadow */
+    gap: 8px; /* Space between text and arrow if applicable */
+}
+
+.more-link:hover {
+    background-color: var(--text-main);
+    color: var(--bg-color); /* Invert colors on hover */
+    border-color: var(--text-main);
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05); /* Enhance shadow */
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.interest-item {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--line-color);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.interest-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.interest-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.interest-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-family: var(--font-serif);
+}
+
+.interest-item p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+/* --- Resume Details --- */
+.timeline-content ul {
+    margin-top: 0.8rem;
+    padding-left: 1.2rem;
+    list-style-type: none; /* We will use custom bullets to keep it minimal */
+}
+
+.timeline-content li {
+    position: relative;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.timeline-content li::before {
+    content: '-';
+    position: absolute;
+    left: -1.2rem;
+    color: var(--line-color);
+}
+
+/* --- Skills and Honors --- */
+.skills-section {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--line-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.skill-category h3 {
+    font-size: 1rem;
+    font-family: var(--font-serif);
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.skill-category p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.awards-list {
+    margin-top: 3rem;
+}
+
+.awards-list h3 {
+    font-size: 1rem;
+    font-family: var(--font-serif);
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.awards-list p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+/* --- Stacked Image Gallery --- */
+.stacked-gallery {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.stacked-gallery::after {
+    content: 'Click to cycle';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: var(--bg-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.stacked-gallery:hover::after {
+    opacity: 1;
+}
+
+.gallery-img {
+    position: absolute;
+    max-height: 90%;
+    max-width: 85%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+    top: 50%;
+    left: 50%;
+    background: var(--bg-color); /* Matches Muji off-white */
+}
+
+.gallery-img.stack-0, .project-item:hover .stacked-gallery .gallery-img.stack-0 {
+    opacity: 1;
+    z-index: 5;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+
+.gallery-img.stack-1, .project-item:hover .stacked-gallery .gallery-img.stack-1 {
+    opacity: 0.6;
+    z-index: 4;
+    transform: translate(-42%, -53%) scale(0.9) rotate(4deg);
+    filter: brightness(0.95);
+}
+
+.gallery-img.stack-2, .project-item:hover .stacked-gallery .gallery-img.stack-2 {
+    opacity: 0.3;
+    z-index: 3;
+    transform: translate(-34%, -56%) scale(0.8) rotate(8deg);
+    filter: brightness(0.9);
+}
+
+.gallery-img.stack-hide, .project-item:hover .stacked-gallery .gallery-img.stack-hide {
+    opacity: 0;
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(0.8) rotate(-5deg);
+}

@@ -1,0 +1,508 @@
+@import url("style-addons.css");
+
+@font-face {
+    font-family: 'Britti Sans';
+    src: url('fonts/BrittiSans-RegularItalic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+:root {
+    /* Muji Color Palette */
+    --bg-color: #f7f6f2;
+    /* Warm, paper-like off-white */
+    --text-main: #3a3835;
+    /* Soft charcoal */
+    --text-muted: #8c8a86;
+    /* Warm grey */
+    --accent-red: #bb3e3e;
+    /* Traditional Hanko stamp red */
+    --line-color: #e5e3db;
+
+    /* Apple Calendar Pastel Colors */
+    --cal-blue: #D6E8FF;
+    --cal-blue-text: #0E62CC;
+    --cal-red: #FFE1DF;
+    --cal-red-text: #D22C27;
+    --cal-green: #D7F2D1;
+    --cal-green-text: #2A791B;
+    --cal-orange: #FFEADB;
+    --cal-orange-text: #C35B07;
+    --cal-purple: #EFE1FF;
+    --cal-purple-text: #692AAB;
+
+    /* Typography */
+    --font-sans: 'Outfit', sans-serif;
+    --font-serif: 'Britti Sans', sans-serif; /* Reused variable name for existing headings */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+    /* We use a custom cursor */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: rgba(187, 62, 62, 0.1);
+    color: var(--accent-red);
+}
+
+/* --- Organic Noise Texture overlay --- */
+.noise-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* --- Layout --- */
+.layout-grid {
+    display: flex;
+    min-height: 100vh;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    width: 250px;
+    padding: 4rem 3rem;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.red-stamp {
+    font-family: var(--font-serif);
+    color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+    font-size: 0.7rem;
+    padding: 0.2rem 0.3rem;
+    border-radius: 2px;
+    transform: rotate(-5deg);
+    /* Slight imperfection */
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text-main);
+}
+
+.nav-links a.active::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: var(--accent-red);
+    border-radius: 50%;
+}
+
+/* --- Main Content --- */
+.content {
+    margin-left: 250px;
+    padding: 6rem 4rem 4rem 4rem;
+    flex-grow: 1;
+}
+
+.section {
+    margin-bottom: 10rem;
+}
+
+/* --- Intro Section --- */
+.intro-section {
+    position: relative;
+    max-width: 800px;
+    margin-top: 5rem;
+}
+
+.main-headline {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+}
+
+.intro-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 500px;
+    line-height: 1.8;
+}
+
+.vertical-aesthetic-text {
+    position: absolute;
+    right: -100px;
+    top: 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5em;
+    /* Spaced out vertical text */
+    opacity: 0.5;
+}
+
+.vertical-aesthetic-text.small {
+    right: 0;
+    font-size: 0.8rem;
+    position: relative;
+    right: auto;
+    top: auto;
+    margin-left: auto;
+}
+
+/* --- Calendar Dots for Timeline --- */
+.cal-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 12px;
+    transform: translateY(-2px);
+}
+
+.cal-blue {
+    background-color: var(--cal-blue-text);
+}
+
+.cal-red {
+    background-color: var(--cal-red-text);
+}
+
+.cal-green {
+    background-color: var(--cal-green-text);
+}
+
+.cal-orange {
+    background-color: var(--cal-orange-text);
+}
+
+.cal-purple {
+    background-color: var(--cal-purple-text);
+}
+
+/* --- Projects --- */
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    margin-bottom: 8rem;
+}
+
+.project-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-image {
+    flex: 1.5;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    display: block;
+    filter: sepia(0.1) contrast(0.95);
+    /* Apply a very subtle warm filter to images to fit the aesthetic */
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-item:hover .project-image img {
+    transform: scale(1.03);
+    /* Subtle zoom on hover */
+}
+
+.project-info {
+    flex: 1;
+    position: relative;
+}
+
+.project-number {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    color: var(--accent-red);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.project-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+}
+
+.project-role {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+/* Apple Calendar Tag Styles */
+.tag-blue {
+    background-color: var(--cal-blue);
+    color: var(--cal-blue-text);
+}
+
+.tag-red {
+    background-color: var(--cal-red);
+    color: var(--cal-red-text);
+}
+
+.tag-green {
+    background-color: var(--cal-green);
+    color: var(--cal-green-text);
+}
+
+.tag-orange {
+    background-color: var(--cal-orange);
+    color: var(--cal-orange-text);
+}
+
+.tag-purple {
+    background-color: var(--cal-purple);
+    color: var(--cal-purple-text);
+}
+
+.project-blurb {
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+/* --- Resume Section --- */
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid var(--line-color);
+    padding-bottom: 1rem;
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.timeline {
+    max-width: 800px;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.timeline-year {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.timeline-year span {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.timeline-content h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+}
+
+.company {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+}
+
+.details {
+    font-size: 0.95rem;
+}
+
+/* --- Footer --- */
+.site-footer {
+    text-align: center;
+    border-top: 1px solid var(--line-color);
+    padding-top: 2rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* --- Custom Cursor --- */
+.cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-red);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(187, 62, 62, 0.4);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+/* --- Emoji Click Animation --- */
+.floating-emoji {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    font-size: 1.8rem;
+    animation: driftUp 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes driftUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5) rotate(-10deg);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translate(-50%, calc(-50% - 20px)) scale(1.1) rotate(5deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, calc(-50% - 120px)) scale(1) rotate(-5deg);
+    }
+}
+
+/* --- Scroll Animations --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .layout-grid {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--line-color);
+        margin-bottom: 2rem;
+    }
+
+    .brand {
+        margin-bottom: 0;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 1rem 2rem;
+    }
+
+    .nav-links {
+        display: none;
+        /* Can be replaced with hamburger */
+    }
+
+    .project-item,
+    .project-item.reverse {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .vertical-aesthetic-text {
+        display: none;
+    }
+}
