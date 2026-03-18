@@ -201,3 +201,130 @@
     z-index: 1;
     transform: translate(-50%, -50%) scale(0.8) rotate(-5deg);
 }
+
+/* --- Photography Interest Panel --- */
+.interest-item--clickable {
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.interest-item--clickable:hover {
+    border-color: var(--text-muted);
+}
+
+.interest-item--clickable.active {
+    border-color: var(--text-main);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.interest-expand-hint {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.interest-item--clickable.active .interest-expand-hint {
+    color: var(--accent-red);
+}
+
+/* --- Photography Modal --- */
+.photo-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(58, 56, 53, 0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.photo-modal-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.photo-modal {
+    background: var(--bg-color);
+    border: 1px solid var(--line-color);
+    border-radius: 16px;
+    padding: 3rem 3.5rem;
+    max-width: 480px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+    transform: translateY(20px) scale(0.97);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.photo-modal-overlay.open .photo-modal {
+    transform: translateY(0) scale(1);
+}
+
+.photo-modal-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.4rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+}
+
+.photo-modal-close:hover {
+    color: var(--text-main);
+}
+
+.photo-modal-icon {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+}
+
+.photo-modal-title {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.photo-modal-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid var(--line-color);
+    padding: 0.4rem 0.9rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.instagram-link:hover {
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    border-color: var(--text-main);
+}

@@ -41,6 +41,12 @@
             
             <section class="section interests-section fade-in">
                 <div class="interest-grid">
+                    <div class="interest-item interest-item--clickable" id="photography-card" onclick="togglePhotography()">
+                        <div class="interest-icon">📷</div>
+                        <h3>Photography</h3>
+                        <p>I like to take photos of my friends and the places I visit.</p>
+                        <span class="interest-expand-hint">Click to see more ↗</span>
+                    </div>
                     <div class="interest-item">
                         <div class="interest-icon">⛰️</div>
                         <h3>Hiking & Outdoors</h3>
@@ -68,6 +74,20 @@
                 <p>© 2026 Celine Mang. Click anywhere to plant a seed.</p>
             </footer>
         </main>
+    </div>
+
+    <!-- Photography Modal -->
+    <div class="photo-modal-overlay" id="photo-modal-overlay" onclick="closePhotographyModal(event)">
+        <div class="photo-modal">
+            <button class="photo-modal-close" onclick="togglePhotography()">✕</button>
+            <div class="photo-modal-icon">📷</div>
+            <h2 class="photo-modal-title">Photography</h2>
+            <p class="photo-modal-desc">I love capturing candid moments — friends, travels, and the little details of everyday life.</p>
+            <a href="https://www.instagram.com/mangojuuce.png/" target="_blank" class="instagram-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                @mangojuuce.png
+            </a>
+        </div>
     </div>
 
     <script src="script.js"></script>

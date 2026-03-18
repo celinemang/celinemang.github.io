@@ -126,3 +126,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+// --- Photography Modal Toggle ---
+function togglePhotography() {
+    const overlay = document.getElementById('photo-modal-overlay');
+    const card = document.getElementById('photography-card');
+    if (!overlay) return;
+
+    const isOpen = overlay.classList.contains('open');
+    overlay.classList.toggle('open', !isOpen);
+    document.body.style.overflow = isOpen ? '' : 'hidden';
+    if (card) card.classList.toggle('active', !isOpen);
+}
+
+function closePhotographyModal(e) {
+    // Only close when clicking the backdrop, not the modal itself
+    if (e.target.id === 'photo-modal-overlay') togglePhotography();
+}
