@@ -2,7 +2,7 @@
 
 # Site Settings
 title: "Celine Mang"
-description: "VR / HCI / Emotion Research"
+description: "HRI / HCI / Human-Centered Intelligent Systems"
 url: "https://celinemang.github.io"
 baseurl: ""
 
@@ -17,7 +17,7 @@ plugins:
 author:
   name: "Celine Mang"
   avatar: "/assets/images/profile.jpg"
-  bio: "VR / HCI / Emotion Research"
+  bio: "HRI / HCI / Human-Centered Intelligent Systems"
   links:
     - label: "GitHub"
       icon: "fab fa-github"

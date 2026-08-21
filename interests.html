@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-v2.css">
 </head>
 <body>
     <div class="cursor-dot"></div>
@@ -24,6 +25,7 @@
             
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="interests.html" class="active">Interests</a></li>
@@ -37,16 +39,17 @@
         </nav>
 
         <main class="content page-content">
+            <p class="eyebrow fade-in">Beyond the work</p>
             <h1 class="main-headline fade-in">Interests</h1>
             
             <section class="section interests-section fade-in">
                 <div class="interest-grid">
-                    <div class="interest-item interest-item--clickable" id="photography-card" onclick="togglePhotography()">
+                    <button type="button" class="interest-item interest-item--clickable" id="photography-card" onclick="togglePhotography()" aria-haspopup="dialog" aria-controls="photo-modal-overlay">
                         <div class="interest-icon">📷</div>
                         <h3>Photography</h3>
                         <p>I like to take photos of my friends and the places I visit.</p>
                         <span class="interest-expand-hint">Click to see more ↗</span>
-                    </div>
+                    </button>
                     <div class="interest-item">
                         <div class="interest-icon">⛰️</div>
                         <h3>Hiking & Outdoors</h3>
@@ -77,11 +80,11 @@
     </div>
 
     <!-- Photography Modal -->
-    <div class="photo-modal-overlay" id="photo-modal-overlay" onclick="closePhotographyModal(event)">
-        <div class="photo-modal">
-            <button class="photo-modal-close" onclick="togglePhotography()">✕</button>
+    <div class="photo-modal-overlay" id="photo-modal-overlay" onclick="closePhotographyModal(event)" aria-hidden="true">
+        <div class="photo-modal" role="dialog" aria-modal="true" aria-labelledby="photo-modal-title">
+            <button type="button" class="photo-modal-close" onclick="togglePhotography()" aria-label="Close photography dialog">✕</button>
             <div class="photo-modal-icon">📷</div>
-            <h2 class="photo-modal-title">Photography</h2>
+            <h2 class="photo-modal-title" id="photo-modal-title">Photography</h2>
             <p class="photo-modal-desc">I love capturing candid moments — friends, travels, and the little details of everyday life.</p>
             <a href="https://www.instagram.com/mangojuuce.png/" target="_blank" class="instagram-link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -90,6 +93,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script-v2.js"></script>
 </body>
 </html>

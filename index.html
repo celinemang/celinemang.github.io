@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celine | Minimalist Portfolio</title>
-    <meta name="description" content="A creative, Muji-inspired personal portfolio.">
+    <title>Celine Mang | HRI & HCI Researcher</title>
+    <meta name="description" content="Celine Mang is a Ph.D. student at George Mason University researching human-robot interaction and human-centered intelligent systems.">
     
     <!-- Clean, warm typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-v2.css">
 </head>
 <body>
     
@@ -31,6 +32,7 @@
             
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="research.html">Research</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="interests.html">Interests</a></li>
@@ -48,16 +50,72 @@
             
             <!-- Intro Section -->
             <section id="intro" class="section intro-section fade-in">
+                <p class="eyebrow">HRI · HCI · Human-centered intelligent systems</p>
                 <h1 class="main-headline">
                     Celine Mang
                 </h1>
                 <p class="intro-desc">
-                    Hi, I'm Celine Mang from Korea. I design and build digital experiences that focus on clarity, purpose, and aesthetics. When I'm not coding, I love outdoor activities—running, hiking, listening to music, and journaling.
+                    I'm a first-year <strong>Computer Science Ph.D. student at George Mason University</strong>, working with <a href="https://dporfirio.github.io/" target="_blank" rel="noopener noreferrer">Dr. David Porfirio</a>. My research interests center on human-robot interaction, with a broader interest in building intelligent systems that people can understand, guide, and trust.
                 </p>
+                <div class="hero-links">
+                    <a href="projects.html" class="more-link">Explore selected work →</a>
+                    <a href="mailto:celine.mang180@gmail.com" class="more-link">Get in touch</a>
+                </div>
+                <div class="current-note">
+                    <span class="current-note-label">Now</span>
+                    <p>Starting my Ph.D. in HRI at George Mason University after building human-in-the-loop AI products full-time at Agent1000.</p>
+                </div>
+            </section>
+
+            <section class="section research-preview fade-in">
+                <div class="resume-header">
+                    <div>
+                        <p class="eyebrow">Research direction</p>
+                        <h2 class="section-title">Building agency into intelligent systems.</h2>
+                    </div>
+                </div>
+                <p class="research-statement">I am interested in how people communicate intent to autonomous systems, understand their behavior, and retain meaningful control. My background in immersive interaction and human-in-the-loop AI gives me a foundation for studying these questions in HRI.</p>
+                <div class="research-grid">
+                    <article class="research-card">
+                        <span>01</span><h3>Human-guided autonomy</h3>
+                        <p>Interfaces that help people specify goals, preferences, and corrections to autonomous systems.</p>
+                    </article>
+                    <article class="research-card">
+                        <span>02</span><h3>Interaction with AI agents</h3>
+                        <p>Mixed-initiative systems that explain recommendations and preserve human approval for consequential actions.</p>
+                    </article>
+                    <article class="research-card">
+                        <span>03</span><h3>Embodied & immersive interaction</h3>
+                        <p>Using VR and interactive prototypes to study behavior, affect, spatial understanding, and trust.</p>
+                    </article>
+                </div>
+                <a href="research.html" class="more-link">View research profile →</a>
             </section>
 
             <!-- Projects Section -->
             <section id="projects" class="section projects-section">
+
+                <article class="project-item featured-project fade-in">
+                    <div class="project-image project-visual" role="img" aria-label="Agent1000 human-in-the-loop AI agent platform overview">
+                        <div class="visual-kicker">AI PRODUCT PLATFORM</div>
+                        <div class="visual-title">Agent1000</div>
+                        <div class="visual-flow"><span>Detect</span><i>→</i><span>Explain</span><i>→</i><span>Approve</span><i>→</i><span>Act</span></div>
+                        <div class="visual-stats">
+                            <div><strong>145</strong><small>routed AI agents</small></div>
+                            <div><strong>2</strong><small>person dev team</small></div>
+                            <div><strong>Full-stack</strong><small>product ownership</small></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-number">01 · Featured</span>
+                        <h2 class="project-title">Agent1000</h2>
+                        <span class="project-role tag-blue">AI Product Developer</span>
+                        <span class="project-role tag-green">Full-time</span>
+                        <p class="project-blurb">Built full-stack AI agent products for small businesses and churches, including a shared 145-agent routing engine, secure multi-tenant infrastructure, and human approval workflows for sensitive actions.</p>
+                        <div class="project-links"><a href="https://www.agent1000.kr/" target="_blank" rel="noopener noreferrer">Visit Agent1000 ↗</a></div>
+                        <span class="project-year">APR — AUG 2026</span>
+                    </div>
+                </article>
                 
                 <!-- Project 1 -->
                 <article class="project-item fade-in">
@@ -65,7 +123,7 @@
                         <img src="images/smash%20high%20poster.png" alt="Smash High Poster">
                     </div>
                     <div class="project-info">
-                        <span class="project-number">01</span>
+                        <span class="project-number">02</span>
                         <h2 class="project-title">Smash-High</h2>
                         <span class="project-role tag-blue">Project Leader</span>
                         <span class="project-role tag-purple">VR Developer</span>
@@ -79,11 +137,11 @@
 
                 <!-- Project 2 -->
                 <article class="project-item reverse fade-in">
-                    <div class="project-image parallax-img">
-                        <img src="project_placeholder_2_1773725667230.png" alt="Marketplace Platform">
+                    <div class="project-image parallax-img project-image--contain">
+                        <img src="images/Revandy1.png" alt="ReVand student resale marketplace interface">
                     </div>
                     <div class="project-info">
-                        <span class="project-number">02</span>
+                        <span class="project-number">03</span>
                         <h2 class="project-title">ReVand</h2>
                         <span class="project-role tag-orange">Product Manager</span>
                         <span class="project-role tag-green">Lead Developer</span>
@@ -103,11 +161,19 @@
 
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-year"><span class="cal-dot cal-purple"></span>June 2024 <span>— Aug 2024</span></div>
+                        <div class="timeline-year"><span class="cal-dot cal-green"></span>Aug 2026 <span>— Present</span></div>
                         <div class="timeline-content">
-                            <h3>Product Management Intern</h3>
-                            <p class="company">Bondit, Seoul, Korea</p>
-                            <p class="details">Owned end-to-end product development of a freshmen welcome book platform serving 500+ US universities.</p>
+                            <h3>Ph.D. Student in Computer Science</h3>
+                            <p class="company">George Mason University · Advised by Dr. David Porfirio</p>
+                            <p class="details">Beginning doctoral research in human-robot interaction and human-centered intelligent systems.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year"><span class="cal-dot cal-blue"></span>Apr 2026 <span>— Aug 2026</span></div>
+                        <div class="timeline-content">
+                            <h3>AI Product Developer · Full-time</h3>
+                            <p class="company"><a href="https://www.agent1000.kr/" target="_blank" rel="noopener noreferrer">Agent1000</a></p>
+                            <p class="details">Built full-stack, human-in-the-loop AI agent products for small businesses and churches as part of a two-person development team.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -116,6 +182,14 @@
                             <h3>Research Assistant Intern</h3>
                             <p class="company">Virginia Tech, 3DI Group</p>
                             <p class="details">Conducting research on emotion elicitation and recognition in VR educational settings.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year"><span class="cal-dot cal-purple"></span>June 2024 <span>— Aug 2024</span></div>
+                        <div class="timeline-content">
+                            <h3>Product Management Intern</h3>
+                            <p class="company">Bondit, Seoul, Korea</p>
+                            <p class="details">Owned end-to-end product development of a freshmen welcome book platform serving 500+ US universities.</p>
                         </div>
                     </div>
                 </div>
@@ -152,6 +226,6 @@
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script-v2.js"></script>
 </body>
 </html>

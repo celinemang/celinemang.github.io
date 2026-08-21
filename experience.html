@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-v2.css">
 </head>
 <body>
     <div class="cursor-dot"></div>
@@ -24,6 +25,7 @@
             
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="experience.html" class="active">Experience</a></li>
                 <li><a href="interests.html">Interests</a></li>
@@ -37,11 +39,40 @@
         </nav>
 
         <main class="content page-content">
+            <p class="eyebrow fade-in">HRI · Research · Product · Engineering</p>
             <h1 class="main-headline fade-in">Experience</h1>
             
             <section class="section resume-section fade-in">
                 
                 <div class="timeline" style="margin-bottom: 4rem;">
+                    <!-- George Mason University -->
+                    <div class="timeline-item">
+                        <div class="timeline-year"><span class="cal-dot cal-green"></span>Aug 2026 <span>— Present</span></div>
+                        <div class="timeline-content">
+                            <h3>Ph.D. Student in Computer Science</h3>
+                            <p class="company">George Mason University · <a href="https://dporfirio.github.io/" target="_blank" rel="noopener noreferrer">Advised by Dr. David Porfirio</a></p>
+                            <ul>
+                                <li>Beginning doctoral research in human-robot interaction and human-centered intelligent systems.</li>
+                                <li>Joining the Autonomous Robot Interaction Lab, with interests in how people communicate with, guide, and understand autonomous robots.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Agent1000 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year"><span class="cal-dot cal-blue"></span>Apr 2026 <span>— Aug 2026</span></div>
+                        <div class="timeline-content">
+                            <h3>AI Product Developer · Full-time</h3>
+                            <p class="company"><a href="https://www.agent1000.kr/" target="_blank" rel="noopener noreferrer">Agent1000</a> · Two-person development team</p>
+                            <ul>
+                                <li>Built and deployed full-stack AI agent products for small businesses and churches using React, Next.js, n8n, Supabase, PostgreSQL, and multiple LLM providers.</li>
+                                <li>Designed a shared routing engine that supported 145 specialized AI agents, with Gemini, Groq, and Cerebras fallback paths for reliability and cost control.</li>
+                                <li>Developed human-in-the-loop approval workflows for sensitive actions, privacy-preserving on-device posture analysis with MediaPipe, and secure multi-tenant data access with Supabase RLS.</li>
+                                <li>Owned product design, frontend and backend implementation, workflow automation, testing, deployment, and developer handoff documentation.</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <!-- 1. Virginia Tech -->
                     <div class="timeline-item">
                         <div class="timeline-year"><span class="cal-dot cal-orange"></span>July 2025 <span>— Present</span></div>
@@ -116,6 +147,14 @@
                 <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 2rem;">Education</h2>
                 <div class="timeline">
                     <div class="timeline-item">
+                        <div class="timeline-year"><span class="cal-dot cal-green"></span>Aug 2026 <span>— Present</span></div>
+                        <div class="timeline-content">
+                            <h3>Ph.D. in Computer Science</h3>
+                            <p class="company">George Mason University, Fairfax, VA</p>
+                            <p class="details">Research focus: Human-Robot Interaction (HRI)</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
                         <div class="timeline-year"><span class="cal-dot cal-blue"></span>Aug 2021 <span>— Dec 2024</span></div>
                         <div class="timeline-content">
                             <h3>B.S. Computer Science</h3>
@@ -153,6 +192,6 @@
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script-v2.js"></script>
 </body>
 </html>

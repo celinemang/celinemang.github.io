@@ -1,13 +1,13 @@
 ---
 layout: home
 title: "Celine Mang"
-excerpt: "VR · HCI · Emotion Researcher"
+excerpt: "HRI · HCI · Human-Centered Intelligent Systems"
 author_profile: true
 ---
 
-👋 Hi! I’m **Celine**, a VR/HCI researcher interested in building emotion-aware technologies that help people learn better.
+👋 Hi! I’m **Celine**, a first-year Computer Science Ph.D. student at George Mason University, advised by [Dr. David Porfirio](https://dporfirio.github.io/).
 
-🎓 Vanderbilt CS → VR research at Virginia Tech  
-🔬 Research interests: VR · HCI · Emotion Recognition · EdTech · Astronomy & ML
+🎓 Vanderbilt CS → VR research at Virginia Tech → Agent1000 AI product development → Ph.D. at George Mason University<br>
+🔬 Research interests: Human-Robot Interaction · HCI · Human-Centered Intelligent Systems
 
 [Download my CV (PDF)](/assets/CelineMang_CV.pdf)
