@@ -17,6 +17,8 @@
     /* Warm grey */
     --accent-red: #bb3e3e;
     /* Traditional Hanko stamp red */
+    --link-color: #946454;
+    --link-hover: #704638;
     --line-color: #e5e3db;
 
     /* Apple Calendar Pastel Colors */
@@ -34,6 +36,22 @@
     /* Typography */
     --font-sans: 'Outfit', sans-serif;
     --font-serif: 'Britti Sans', sans-serif; /* Reused variable name for existing headings */
+}
+
+a {
+    color: var(--link-color);
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+    transition: color 0.2s ease;
+}
+
+a:where(:visited) {
+    color: var(--link-color);
+}
+
+a:where(:hover, :focus-visible) {
+    color: var(--link-hover);
 }
 
 * {
