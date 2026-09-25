@@ -128,18 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // --- Photography Modal Toggle ---
-function togglePhotography() {
-    const overlay = document.getElementById('photo-modal-overlay');
-    const card = document.getElementById('photography-card');
-    if (!overlay) return;
-
-    const isOpen = overlay.classList.contains('open');
-    overlay.classList.toggle('open', !isOpen);
-    document.body.style.overflow = isOpen ? '' : 'hidden';
-    if (card) card.classList.toggle('active', !isOpen);
-}
-
-function closePhotographyModal(e) {
-    // Only close when clicking the backdrop, not the modal itself
-    if (e.target.id === 'photo-modal-overlay') togglePhotography();
-}
+let previousFocus=null;
+function togglePhotography(){const overlay=document.getElementById("photo-modal-overlay");if(!overlay)return;const opening=!overlay.classList.contains("open");overlay.classList.toggle("open",opening);overlay.setAttribute("aria-hidden",String(!opening));document.body.style.overflow=opening?"hidden":"";if(opening){previousFocus=document.activeElement;overlay.querySelector(".photo-modal-close")?.focus()}else previousFocus?.focus()}
+function closePhotographyModal(event){if(event.target.id==="photo-modal-overlay")togglePhotography()}
+document.addEventListener("keydown",event=>{if(event.key==="Escape"&&document.getElementById("photo-modal-overlay")?.classList.contains("open"))togglePhotography()});
